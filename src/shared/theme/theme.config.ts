@@ -4,55 +4,61 @@ import { ThemeType } from "./theme.type";
 export const appTheme = {
   [ThemeType.Light]: {
     colors: {
-      primary: "#000000",
-      backgrounds: {
-        primary: "#f5f5f5",
-      },
+      primary: "#111517",
+    },
+    backgrounds: {
+      primary: "#ffffff",
     },
     fonts: {
       primary: {
         20: css`
-          font-family: "Montserrat";
-          font-weight: 400;
+          font-family: "Nunito Sans";
+          font-weight: 300;
           font-size: 1rem;
         `,
         40: css`
-          font-family: "Montserrat";
-          font-weight: 500;
+          font-family: "Nunito Sans";
+          font-weight: 600;
           font-size: 1.2rem;
         `,
         60: css`
-          font-family: "Montserrat";
-          font-weight: 700;
+          font-family: "Nunito Sans";
+          font-weight: 800;
           font-size: 1.4rem;
         `,
       },
+    },
+    shadows: {
+      primary: "rgba(149, 157, 165, 0.2) 0px 8px 24px",
     },
   },
   [ThemeType.Dark]: {
     colors: {
       primary: "ffffff",
-      backgrounds: {
-        primary: "#141414",
-      },
+    },
+    backgrounds: {
+      primary: "#202c37",
     },
     fonts: {
       primary: {
         20: css`
-          font-family: "Montserrat";
-          font-weight: 400;
+          font-family: "Nunito Sans";
+          font-weight: 300;
           font-size: 1rem;
         `,
         40: css`
-          font-family: "Montserrat";
-          font-weight: 500;
+          font-family: "Nunito Sans";
+          font-weight: 600;
           font-size: 1.2rem;
         `,
         60: css`
-          font-family: "Montserrat";
-          font-weight: 700;
+          font-family: "Nunito Sans";
+          font-weight: 800;
           font-size: 1.4rem;
         `,
+      },
+      shadows: {
+        primary: "rgba(245, 245, 245, 0.2) 0px 0px 8px",
       },
     },
   },

@@ -6,10 +6,13 @@ export interface AppThemeType {
   };
   fonts: {
     primary: {
-      80: typeof css;
+      number: typeof css;
     };
   };
-  background: {
+  backgrounds: {
+    primary: string;
+  };
+  shadows: {
     primary: string;
   };
 }
