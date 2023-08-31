@@ -1,4 +1,4 @@
-import { DefaultTheme, ThemedCssFunction } from "styled-components";
+import { css } from "styled-components";
 
 export interface AppThemeType {
   colors: {
@@ -6,7 +6,7 @@ export interface AppThemeType {
   };
   fonts: {
     primary: {
-      80: ThemedCssFunction<DefaultTheme>;
+      80: typeof css;
     };
   };
   background: {
