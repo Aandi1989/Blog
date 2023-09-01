@@ -1,5 +1,4 @@
-import { Router } from "@shared/components/app-routes";
-import { Header } from "@shared/components/header";
+import { Header, Router } from "@shared/components";
 import { ThemeType, getTheme } from "@shared/theme";
 import { BrowserRouter } from "react-router-dom";
 import { ThemeProvider } from "styled-components";

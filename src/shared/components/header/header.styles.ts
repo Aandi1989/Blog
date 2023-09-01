@@ -8,13 +8,14 @@ export const Header = styled.div`
   padding: 20px;
   background: ${({ theme }) => theme.backgrounds.primary};
   box-shadow: ${({ theme }) => theme.shadows.primary};
+  ${({ theme }) => theme.fonts.primary[60]};
 `;
 
 //  ${({ theme }) => theme.fonts.primary[60]}; показывает ошибку TS
 
 export const NavigationLink = styled(NavLink)`
   text-decoration: none;
-  color: ${({ theme }) => theme.colors.primaty};
+  color: ${({ theme }) => theme.colors.primary};
   &:hover {
     text-decoration: underline;
   }

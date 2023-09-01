@@ -1,12 +1,14 @@
-import { css } from "styled-components";
+import { RuleSet } from "styled-components/dist/types";
 
 export interface AppThemeType {
   colors: {
-    primaty: string;
+    primary: string;
   };
   fonts: {
     primary: {
-      number: typeof css;
+      20: RuleSet<object>;
+      40: RuleSet<object>;
+      60: RuleSet<object>;
     };
   };
   backgrounds: {

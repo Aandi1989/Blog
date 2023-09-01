@@ -1,3 +1,4 @@
+import { memo } from "react";
 import { RouteNames } from "@core/constants";
 import * as Styled from "./header.styles";
 
@@ -12,4 +13,4 @@ const Header: React.FC = () => {
   );
 };
 
-export default Header;
+export default memo(Header);

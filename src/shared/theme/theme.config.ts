@@ -57,9 +57,9 @@ export const appTheme = {
           font-size: 1.4rem;
         `,
       },
-      shadows: {
-        primary: "rgba(245, 245, 245, 0.2) 0px 0px 8px",
-      },
+    },
+    shadows: {
+      primary: "rgba(245, 245, 245, 0.2) 0px 0px 8px",
     },
   },
 };

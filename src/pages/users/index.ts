@@ -1,1 +1,1 @@
-export { default as UsersPage } from "./users.component";
+export { default as UsersPage } from "./users.component"; // -> { UsersPage }
