@@ -7,7 +7,7 @@ import { TodosPage } from "@pages/todos";
 import { UserPage } from "@pages/user";
 import { UsersPage } from "@pages/users";
 import { Route, Routes } from "react-router-dom";
-import { Layout } from "@shared/components";
+import { Layout } from "@pages/layout";
 
 const Router: React.FC = () => {
   return (

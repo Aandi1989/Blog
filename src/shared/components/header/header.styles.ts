@@ -22,6 +22,6 @@ export const NavigationLink = styled(NavLink)`
     text-decoration: underline;
   }
   &.active {
-    color: blue;
+    color: #2bc6ff;
   }
 `;
