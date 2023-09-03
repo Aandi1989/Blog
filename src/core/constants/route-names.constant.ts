@@ -1,5 +1,5 @@
 export enum RouteNames {
-  HOME = "/blog",
+  HOME = "/",
   NEWS = "/news",
   NOT_FOUND_PAGE = "/*",
   TODOS = "/todos",

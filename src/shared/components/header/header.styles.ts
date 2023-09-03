@@ -11,12 +11,13 @@ export const Header = styled.div`
   ${({ theme }) => theme.fonts.primary[60]};
 `;
 
-//  ${({ theme }) => theme.fonts.primary[60]}; показывает ошибку TS
-
 export const NavigationLink = styled(NavLink)`
   text-decoration: none;
   color: ${({ theme }) => theme.colors.primary};
   &:hover {
     text-decoration: underline;
+  }
+  &.active {
+    color: blue;
   }
 `;
