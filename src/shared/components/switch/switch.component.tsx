@@ -1,11 +1,15 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import * as Styled from "./switch.styles";
+import { ThemeContext } from "@core/hoc";
 
 const Switch: React.FC = () => {
   const [isToggled, setIsToggled] = useState(false);
+  const { theme, setTheme } = useContext(ThemeContext)!;
+  console.log(theme);
 
   const onToggle = () => {
     setIsToggled(!isToggled);
+    // setTheme();
   };
 
   return (

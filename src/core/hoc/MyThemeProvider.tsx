@@ -1,21 +1,26 @@
-import { ThemeType, getTheme } from "@shared/theme";
-import React, { createContext, useContext, useState } from "react";
+import { ThemeType, getTheme, AppThemeType } from "@shared/theme";
+import React, { createContext, useState } from "react";
 
-interface ThemeContectType {
-  theme: ThemeType;
-  setTheme: (newValue: ThemeType) => void;
+export interface ThemeContectType {
+  theme: AppThemeType;
+  setTheme: (newValue: AppThemeType) => void;
 }
 
-const themeValue: ThemeType = getTheme(ThemeType.Light);
+const themeValue: AppThemeType = getTheme(ThemeType.Light);
 
-// const theme = getTheme(ThemeType.Light);
-
-const ThemeContext = createContext<ThemeContectType | undefined>(undefined);
+export const ThemeContext = createContext<ThemeContectType | undefined>(undefined);
 
 export const MyThemeProvider = ({ children }: { children: React.ReactNode }) => {
-  const [theme, setMyTheme] = useState<ThemeType>(themeValue);
+  const [theme, setMyTheme] = useState<AppThemeType>(themeValue);
 
-  const updateTheme = (newValue: ThemeType) => {
+  const setTheme = (newValue: AppThemeType) => {
     setMyTheme(newValue);
-  }
+  };
+
+  const contextValue: ThemeContectType = {
+    theme,
+    setTheme,
+  };
+
+  return <ThemeContext.Provider value={contextValue}>{children}</ThemeContext.Provider>;
 };

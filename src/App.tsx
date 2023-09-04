@@ -1,11 +1,11 @@
+import { ThemeContext } from "@core/hoc";
 import { Router } from "@shared/components";
-import { ThemeType, getTheme } from "@shared/theme";
 import { BrowserRouter } from "react-router-dom";
 import { ThemeProvider } from "styled-components";
-
-const theme = getTheme(ThemeType.Light);
+import { useContext } from "react";
 
 function App() {
+  const { theme } = useContext(ThemeContext)!;
   return (
     <BrowserRouter>
       <ThemeProvider theme={theme}>
