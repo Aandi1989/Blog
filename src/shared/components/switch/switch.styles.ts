@@ -1,8 +1,17 @@
 import styled from "styled-components";
+import { BsMoon } from "react-icons/bs";
+import { FiSun } from "react-icons/fi";
 
 type Props = {
   isToggled: boolean;
 };
+
+export const Wrapper = styled.div`
+  width: 120px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+`;
 
 export const ToggleSwitchWrapper = styled.label`
   position: relative;
@@ -39,4 +48,18 @@ export const ToggleSwitchSlider = styled.span<Props>`
     transform: ${({ isToggled }) => (isToggled ? "translateX(25px)" : "none")};
     transition: transform 0.3s ease;
   }
+`;
+
+export const Moon = styled(BsMoon)`
+  width: 20px;
+  height: 20px;
+  color: ${({ theme }) => theme.colors.primary};
+  transition: color 0.2s ease;
+`;
+
+export const Sun = styled(FiSun)`
+  width: 20px;
+  height: 20px;
+  color: ${({ theme }) => theme.colors.primary};
+  transition: color 0.2s ease;
 `;

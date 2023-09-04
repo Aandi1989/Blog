@@ -3,6 +3,7 @@ import { ThemeType } from "./theme.type";
 
 export const appTheme = {
   [ThemeType.Light]: {
+    type: ThemeType.Light,
     colors: {
       primary: "#111517",
     },
@@ -33,8 +34,9 @@ export const appTheme = {
     },
   },
   [ThemeType.Dark]: {
+    type: ThemeType.Dark,
     colors: {
-      primary: "ffffff",
+      primary: "#ffffff",
     },
     backgrounds: {
       primary: "#202c37",

@@ -1,6 +1,7 @@
 import { RuleSet } from "styled-components/dist/types";
 
 export interface AppThemeType {
+  type: ThemeType;
   colors: {
     primary: string;
   };
