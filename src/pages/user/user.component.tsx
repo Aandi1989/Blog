@@ -3,6 +3,7 @@ import { Button } from "@shared/ui-kit/button";
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import * as Styled from "./user.styles";
+import { PostPage, TodoPage } from "../index";
 
 enum Tabs {
   Initial = "INITIAL",
@@ -39,9 +40,11 @@ const UserPage: React.FC = () => {
         <Styled.Item>Email: {currentUser.email}</Styled.Item>
         <Styled.Item>UserId: {currentUser.id}</Styled.Item>
         <Styled.ButtonsWrapper>
-          <Button onClick={onTabClick(Tabs.Posts)} name={"Posts"} />
-          <Button onClick={onTabClick(Tabs.Todos)} name={"Todos"} />
+          <Button active={currentTab === "POSTS"} onClick={onTabClick(Tabs.Posts)} name={"Posts"} />
+          <Button active={currentTab === "TODOS"} onClick={onTabClick(Tabs.Todos)} name={"Todos"} />
         </Styled.ButtonsWrapper>
+        {currentTab === Tabs.Posts && <PostPage />}
+        {currentTab === Tabs.Todos && <TodoPage />}
       </Styled.Wrapper>
     )
   );

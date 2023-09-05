@@ -2,6 +2,7 @@ import { RouteNames } from "@core/constants";
 import { HomePage } from "@pages/homepage";
 import { NotFoundPage } from "@pages/not-found-page";
 import { PostsPage } from "@pages/posts";
+import { PostPage } from "@pages/post";
 import { TodosPage } from "@pages/todos";
 import { UserPage } from "@pages/user";
 import { UsersPage } from "@pages/users";
@@ -19,6 +20,7 @@ const Router: React.FC = () => {
         <Route path={RouteNames.USERS} element={<UsersPage />} />
         <Route path={`${RouteNames.USERS}/:id`} element={<UserPage />} />
         <Route path={RouteNames.POSTS} element={<PostsPage />} />
+        <Route path={`${RouteNames.POSTS}/:id`} element={<PostPage />} />
         <Route path={RouteNames.NOT_FOUND_PAGE} element={<NotFoundPage />} />
       </Route>
     </Routes>
