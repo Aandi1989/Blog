@@ -3,7 +3,7 @@ import { BsMoon } from "react-icons/bs";
 import { FiSun } from "react-icons/fi";
 
 type Props = {
-  isToggled: boolean;
+  istoggled: boolean;
 };
 
 export const Wrapper = styled.div`
@@ -28,7 +28,7 @@ export const ToggleSwitchInput = styled.input.attrs({ type: "checkbox" })`
 export const ToggleSwitchSlider = styled.span<Props>`
   position: absolute;
   cursor: pointer;
-  background-color: ${({ isToggled }) => (isToggled ? "#2bc6ff" : "#b6b6b6")};
+  background-color: ${({ istoggled }) => (istoggled ? "#2bc6ff" : "#b6b6b6")};
   border-radius: 25px;
   top: 0;
   right: 0;
@@ -45,7 +45,7 @@ export const ToggleSwitchSlider = styled.span<Props>`
     height: 21px;
     background-color: #333;
     border-radius: 50%;
-    transform: ${({ isToggled }) => (isToggled ? "translateX(25px)" : "none")};
+    transform: ${({ istoggled }) => (istoggled ? "translateX(25px)" : "none")};
     transition: transform 0.3s ease;
   }
 `;

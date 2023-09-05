@@ -4,13 +4,13 @@ import { ThemeContext } from "@core/hoc";
 import { ThemeType, getTheme } from "@shared/theme";
 
 const Switch: React.FC = () => {
-  const [isToggled, setIsToggled] = useState(false);
+  const [istoggled, setIsToggled] = useState(false);
   const { theme, setTheme } = useContext(ThemeContext)!;
   const lightTheme = getTheme(ThemeType.Light);
   const darkTheme = getTheme(ThemeType.Dark);
 
   const onToggle = () => {
-    setIsToggled(!isToggled);
+    setIsToggled(!istoggled);
     if (theme.type === "LIGHT") {
       setTheme(darkTheme);
     } else {
@@ -22,8 +22,8 @@ const Switch: React.FC = () => {
     <Styled.Wrapper>
       <Styled.Sun />
       <Styled.ToggleSwitchWrapper>
-        <Styled.ToggleSwitchInput checked={isToggled} onChange={onToggle} />
-        <Styled.ToggleSwitchSlider isToggled={isToggled} />
+        <Styled.ToggleSwitchInput checked={istoggled} onChange={onToggle} />
+        <Styled.ToggleSwitchSlider istoggled={istoggled} />
       </Styled.ToggleSwitchWrapper>
       <Styled.Moon />
     </Styled.Wrapper>

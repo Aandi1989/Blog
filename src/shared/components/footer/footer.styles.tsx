@@ -8,7 +8,7 @@ export const Footer = styled.footer`
 `;
 
 export const Wrapper = styled.div`
-  padding: 20px;
+  padding: 20px 30px;
   max-width: 1240px;
   margin: 0 auto;
 `;

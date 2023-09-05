@@ -9,7 +9,7 @@ export const Header = styled.div`
 export const Wrapper = styled.div`
   display: flex;
   justify-content: space-between;
-  padding: 20px;
+  padding: 20px 30px;
   max-width: 1240px;
   margin: 0 auto;
 `;
