@@ -7,6 +7,7 @@ import { UserPage } from "@pages/user";
 import { UsersPage } from "@pages/users";
 import { Route, Routes } from "react-router-dom";
 import { Layout } from "@pages/layout";
+import { TodoPage } from "@pages/todo";
 
 const Router: React.FC = () => {
   return (
@@ -14,6 +15,7 @@ const Router: React.FC = () => {
       <Route path={RouteNames.HOME} element={<Layout />}>
         <Route index element={<HomePage />} />
         <Route path={RouteNames.TODOS} element={<TodosPage />} />
+        <Route path={`${RouteNames.TODOS}/:id`} element={<TodoPage />} />
         <Route path={RouteNames.USERS} element={<UsersPage />} />
         <Route path={`${RouteNames.USERS}/:id`} element={<UserPage />} />
         <Route path={RouteNames.POSTS} element={<PostsPage />} />
