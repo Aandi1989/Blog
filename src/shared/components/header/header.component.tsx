@@ -10,7 +10,7 @@ const Header: React.FC = () => {
         <Styled.NavigationLink to={RouteNames.HOME}>Home</Styled.NavigationLink>
         <Styled.NavigationLink to={RouteNames.USERS}>Users</Styled.NavigationLink>
         <Styled.NavigationLink to={RouteNames.TODOS}>Todos</Styled.NavigationLink>
-        <Styled.NavigationLink to={RouteNames.NEWS}>News</Styled.NavigationLink>
+        <Styled.NavigationLink to={RouteNames.POSTS}>Posts</Styled.NavigationLink>
         <Switch />
       </Styled.Wrapper>
     </Styled.Header>
