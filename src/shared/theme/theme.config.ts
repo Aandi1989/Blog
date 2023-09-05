@@ -30,7 +30,7 @@ export const appTheme = {
       },
     },
     shadows: {
-      primary: "rgba(149, 157, 165, 0.2) 0px 8px 24px",
+      primary: "rgba(149, 157, 165, 0.5) 0px 8px 24px",
     },
   },
   [ThemeType.Dark]: {
