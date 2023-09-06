@@ -1,3 +1,7 @@
+import * as Styled from "./posts.styles";
+import { usePostsApi } from "@core/store";
+import { useEffect } from "react";
+
 const PostsPage: React.FC = () => {
   const { getAllPosts, cleanPosts, isLoading, postsIds, postsMap } = usePostsApi();
 
