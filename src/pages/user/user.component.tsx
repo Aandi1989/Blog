@@ -43,8 +43,6 @@ const UserPage: React.FC = () => {
           <Button onClick={onTabClick(Tabs.Posts)} name={"Posts"} />
           <Button onClick={onTabClick(Tabs.Todos)} name={"Todos"} />
         </Styled.ButtonsWrapper>
-        {currentTab === Tabs.Posts && <PostPage />}
-        {currentTab === Tabs.Todos && <TodoPage />}
       </Styled.Wrapper>
     )
   );

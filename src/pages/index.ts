@@ -1,4 +1,3 @@
-export * from "./users";
 export * from "./user"; // { UserPage}
 export * from "./homepage";
 export * from "./posts";
