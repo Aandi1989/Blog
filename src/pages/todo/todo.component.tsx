@@ -4,8 +4,8 @@ import { useEffect } from "react";
 import { useTodosApi } from "@core/store";
 
 const TodoPage: React.FC = () => {
-  const { id } = useParams();
   const { getTodosByUserId, cleanTodos, isLoading, todoIds, todoMap } = useTodosApi();
+  const { id } = useParams();
 
   useEffect(() => {
     if (id) {

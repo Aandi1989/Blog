@@ -13,5 +13,5 @@ export const Item = styled.div`
 export const ButtonsWrapper = styled.div`
   display: flex;
   gap: 15px;
-  margin-left: 10px;
+  margin: 0 0 20px 10px;
 `;
