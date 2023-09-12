@@ -1,4 +1,5 @@
-export interface ButtonType {
-  onClick: () => void;
-  name: string;
-}
+import { ButtonHTMLAttributes, PropsWithChildren } from "react";
+
+export interface ButtonProps
+  extends PropsWithChildren,
+    ButtonHTMLAttributes<HTMLButtonElement> {}

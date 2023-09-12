@@ -1,5 +1,5 @@
 import { useUsersApi } from "@core/store";
-import { Button } from "@shared/ui-kit/button";
+import { Button } from "@shared/ui-kit/button"; // TODO: import { Button, Zalupa } from '@shared/ui-kit'
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import * as Styled from "./user.styles";
@@ -43,6 +43,7 @@ const UserPage: React.FC = () => {
           <Button onClick={onTabClick(Tabs.Posts)} name={"Posts"} />
           <Button onClick={onTabClick(Tabs.Todos)} name={"Todos"} />
         </Styled.ButtonsWrapper>
+        {/* TODO: PostPage -> PostsList (component), TodoPage -> TodosList (component) и в папку components*/}
         {/* {currentTab === Tabs.Posts && <PostPage />}
         {currentTab === Tabs.Todos && <TodoPage />} */}
       </Styled.Wrapper>
