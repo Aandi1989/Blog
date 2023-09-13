@@ -18,6 +18,8 @@ const TodoPage: React.FC = () => {
 
   return (
     <Styled.Wrapper>
+      {/* Писал так специально, потому что не для всех id есть Todo, 
+      поэтому если todoIds.length  false - показываем div с текстом*/}
       {todoIds.length ? (
         todoIds.map((id) => (
           <Styled.ItemsWrapper key={id}>

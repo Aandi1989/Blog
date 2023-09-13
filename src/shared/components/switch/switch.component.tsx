@@ -1,6 +1,6 @@
 import React, { useContext, useState } from "react";
 import * as Styled from "./switch.styles";
-import { ThemeContext } from "@core/hoc";
+import { ThemeContext } from "@shared/components";
 import { ThemeType, getTheme } from "@shared/theme";
 
 const Switch: React.FC = () => {

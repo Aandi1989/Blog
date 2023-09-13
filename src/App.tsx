@@ -1,20 +1,17 @@
-import { ThemeContext } from "@core/hoc";
 import { Router } from "@shared/components";
 import { BrowserRouter } from "react-router-dom";
-import { ThemeProvider } from "styled-components";
-import { useContext } from "react";
 import { Provider } from "react-redux";
 import { store } from "@core/store";
+import { MyThemeProvider } from "@shared/components";
 
 function App() {
-  const { theme } = useContext(ThemeContext)!;
   return (
     <BrowserRouter>
-      <ThemeProvider theme={theme}>
+      <MyThemeProvider>
         <Provider store={store}>
           <Router />
         </Provider>
-      </ThemeProvider>
+      </MyThemeProvider>
     </BrowserRouter>
   );
 }

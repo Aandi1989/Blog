@@ -1,5 +1,6 @@
 import { ThemeType, getTheme, AppThemeType } from "@shared/theme";
 import React, { createContext, useState } from "react";
+import { ThemeProvider } from "styled-components";
 
 export interface ThemeContectType {
   theme: AppThemeType;
@@ -22,5 +23,9 @@ export const MyThemeProvider = ({ children }: { children: React.ReactNode }) => 
     setTheme,
   };
 
-  return <ThemeContext.Provider value={contextValue}>{children}</ThemeContext.Provider>;
+  return (
+    <ThemeContext.Provider value={contextValue}>
+      <ThemeProvider theme={theme}>{children}</ThemeProvider>
+    </ThemeContext.Provider>
+  );
 };
