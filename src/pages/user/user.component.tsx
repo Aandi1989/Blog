@@ -1,5 +1,5 @@
 import { useUsersApi } from "@core/store";
-import { Button } from "@shared/ui-kit";
+import { Button, Input } from "@shared/ui-kit";
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import * as Styled from "./user.styles";
@@ -40,8 +40,14 @@ const UserPage: React.FC = () => {
         <Styled.Item>Email: {currentUser.email}</Styled.Item>
         <Styled.Item>UserId: {currentUser.id}</Styled.Item>
         <Styled.ButtonsWrapper>
-          <Button onClick={onTabClick(Tabs.Posts)} name={"Posts"} />
-          <Button onClick={onTabClick(Tabs.Todos)} name={"Todos"} />
+          <Button onClick={onTabClick(Tabs.Posts)} children={"Posts"} />
+          <Button onClick={onTabClick(Tabs.Todos)} children={"Todos"} />
+          <Input
+            onChange={() => {
+              console.log("Input");
+            }}
+            placeholder="Type here"
+          />
         </Styled.ButtonsWrapper>
         {/* {currentTab === Tabs.Posts && <PostPage />}
         {currentTab === Tabs.Todos && <TodoPage />} */}
