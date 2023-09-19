@@ -1,1 +1,1 @@
-export { default as Router } from "./app-routes.component";
+export { default as router } from "./app-routes.component";

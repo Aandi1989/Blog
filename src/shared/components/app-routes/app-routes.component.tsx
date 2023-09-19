@@ -1,4 +1,4 @@
-import { Route, Routes } from "react-router-dom";
+import { Route, Routes, createBrowserRouter } from "react-router-dom";
 import { routeConfig } from "./routeConfig";
 
 const Router: React.FC = () => {
@@ -15,6 +15,13 @@ const Router: React.FC = () => {
   );
 };
 
-// как сюда прикрутить private route и роутинг по ролям??
+const router = createBrowserRouter([
+  {
+    path: "/",
+    element: <Router />,
+  },
+]);
 
-export default Router;
+export default router;
+
+// как сюда прикрутить private route и роутинг по ролям??

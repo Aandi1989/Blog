@@ -1,18 +1,18 @@
-import { Router } from "@shared/components";
-import { BrowserRouter } from "react-router-dom";
+import { router } from "@shared/components";
 import { Provider } from "react-redux";
 import { store } from "@core/store";
 import { MyThemeProvider } from "@shared/components";
+import { RouterProvider } from "react-router-dom";
 
 function App() {
   return (
-    <BrowserRouter>
-      <MyThemeProvider>
-        <Provider store={store}>
-          <Router />
-        </Provider>
-      </MyThemeProvider>
-    </BrowserRouter>
+    // <BrowserRouter>
+    <MyThemeProvider>
+      <Provider store={store}>
+        <RouterProvider router={router} />
+      </Provider>
+    </MyThemeProvider>
+    // </BrowserRouter>
   );
 }
 
