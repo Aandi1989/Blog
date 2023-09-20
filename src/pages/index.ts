@@ -6,3 +6,4 @@ export * from "./not-found-page";
 export * from "./todos";
 export * from "../shared/components/TodosList";
 export * from "./layout";
+export * from "./login";

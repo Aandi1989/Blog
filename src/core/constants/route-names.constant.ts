@@ -4,4 +4,5 @@ export enum RouteNames {
   TODOS = "todos",
   USERS = "users",
   POSTS = "posts",
+  LOGIN = "login",
 }
