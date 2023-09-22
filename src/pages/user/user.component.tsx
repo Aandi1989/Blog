@@ -41,8 +41,8 @@ const UserPage: React.FC = () => {
         <Styled.Item>Email: {currentUser.email}</Styled.Item>
         <Styled.Item>UserId: {currentUser.id}</Styled.Item>
         <Styled.ButtonsWrapper>
-          <Button onClick={onTabClick(Tabs.Posts)} name={"Posts"} />
-          <Button onClick={onTabClick(Tabs.Todos)} name={"Todos"} />
+          <Button onClick={onTabClick(Tabs.Posts)} children={"Posts"} />
+          <Button onClick={onTabClick(Tabs.Todos)} children={"Todos"} />
         </Styled.ButtonsWrapper>
         {currentTab === Tabs.Posts && <PostPage />}
         {currentTab === Tabs.Todos && <TodoPage />}

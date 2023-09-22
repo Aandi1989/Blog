@@ -10,7 +10,7 @@ function App() {
   const { theme } = useContext(ThemeContext)!;
   return (
     <BrowserRouter>
-    {/* TODO: ThemeProvider вынести в свой типо hoc */}
+      {/* TODO: ThemeProvider вынести в свой типо hoc */}
       <ThemeProvider theme={theme}>
         <Provider store={store}>
           <Router />
