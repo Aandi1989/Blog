@@ -12,6 +12,8 @@ import { TodoPage } from "@pages/todo";
 
 const Router: React.FC = () => {
   return (
+    // TODO: Сделать через роутер config
+    // https://v5.reactrouter.com/web/example/route-config
     <Routes>
       <Route path={RouteNames.HOME} element={<Layout />}>
         <Route index element={<HomePage />} />

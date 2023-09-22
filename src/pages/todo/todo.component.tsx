@@ -18,6 +18,7 @@ const TodoPage: React.FC = () => {
 
   return (
     <Styled.Wrapper>
+      {/* TODO: todoIds.length -> !!todoIds.length (ничаче будет рендерится 0 если массив пустой) */}
       {todoIds.length ? (
         todoIds.map((id) => (
           <Styled.ItemsWrapper key={id}>
