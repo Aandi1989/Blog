@@ -1,108 +1,49 @@
-import { Route, Routes, createBrowserRouter, useRouteError } from "react-router-dom";
-
-import { routeConfig } from "./routeConfig";
-import { UsersPage } from "@pages/users";
+import { RouteNames } from "@core/constants";
+import { NotFoundPage } from "@pages/not-found-page";
+import { PostsPage } from "@pages/posts";
+import { PostPage } from "@shared/components/PostsList";
+import { TodosPage } from "@pages/todos";
 import { UserPage } from "@pages/user";
-import { HomePage } from "@pages/homepage";
-
-const Router: React.FC = () => {
-  return (
-    <Routes>
-      {routeConfig.map((route) => (
-        <Route key={route.path} path={route.path} element={<route.element />}>
-          {route.children?.map((childRoute) => (
-            <Route key={childRoute.path} path={childRoute.path} element={<childRoute.element />} />
-          ))}
-        </Route>
-      ))}
-    </Routes>
-  );
-};
+import { UsersPage } from "@pages/users";
+import { Layout } from "@pages/layout";
+import { TodoPage } from "@shared/components/TodosList";
+import { createBrowserRouter } from "react-router-dom";
 
 const router = createBrowserRouter([
-  // TODO: Тут была ошибка (все по документации)
   {
-    path: "/",
-    element: <HomePage />,
-  },
-  {
-    path: "/users",
-    element: <UsersPage />,
-  },
-  {
-    path: "users/hui",
-    element: <div children="hui" />,
-  },
-  {
-    path: "users/:id",
-    element: <UserPage />,
+    path: RouteNames.HOME,
+    element: <Layout />,
+    children: [
+      {
+        path: RouteNames.TODOS,
+        element: <TodosPage />,
+      },
+      {
+        path: `${RouteNames.TODOS}/:id`,
+        element: <TodoPage />,
+      },
+      {
+        path: RouteNames.USERS,
+        element: <UsersPage />,
+      },
+      {
+        path: `${RouteNames.USERS}/:id`,
+        element: <UserPage />,
+      },
+      {
+        path: RouteNames.POSTS,
+        element: <PostsPage />,
+      },
+      {
+        path: `${RouteNames.POSTS}/:id`,
+        element: <PostPage />,
+      },
+      {
+        path: RouteNames.NOT_FOUND_PAGE,
+        element: <NotFoundPage />,
+      },
+    ],
   },
 ]);
 
 export default router;
-
-// как сюда прикрутить private route и роутинг по ролям??
-// Изи. Чисто методы js
-// PSEUDOCODE
-
-const ErrorPage = () => {
-  const error = useRouteError();
-  console.error(error);
-
-  return (
-    <div id="error-page">
-      <h1>Oops!</h1>
-      <p>Sorry, an unexpected error has occurred.</p>
-      <p>
-        {/* @ts-ignore */}
-        <i>{error.statusText || error.message}</i>
-      </p>
-    </div>
-  );
-};
-
-const adminRoutes = [
-  {
-    path: "/users",
-    element: <UsersPage />,
-  },
-  {
-    path: "users/hui",
-    element: <div children="hui" />,
-  },
-  {
-    path: "users/:id",
-    element: <UserPage />,
-  },
-];
-
-const loxEbaniRoutes = [
-  {
-    path: "/",
-    element: <HomePage />,
-    errorElement: <h1>404 No page. blya</h1>,
-  },
-  {
-    path: "users/hui",
-    element: <div children="hui" />,
-  },
-];
-
-enum UserRoles {
-  Admin = "ADMIN",
-  LohEbani = "LOX_EBANII",
-}
-
-const useProfile = () => {
-  return {
-    firstName: "Hui",
-    lastName: "Blyat",
-    role: UserRoles.LohEbani,
-  };
-};
-
-export const useRoutesWithUserRole = () => {
-  const { role } = useProfile();
-  const routes = [...loxEbaniRoutes, ...(role === UserRoles.Admin ? adminRoutes : [])];
-  return createBrowserRouter(routes);
-};
